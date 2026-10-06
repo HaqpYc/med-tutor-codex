@@ -1,0 +1,34 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "med-tutor",
+  "version": "0.1.1",
+  "description": "Tuteur EDN fondé sur les Collèges officiels avec citations vérifiables.",
+  "author": {
+    "name": "med-tutor"
+  },
+  "keywords": [
+    "education",
+    "medicine",
+    "edn",
+    "france"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "med-tutor",
+        "shortDescription": "Tuteur EDN sourcé",
+        "longDescription": "Interroge les Collèges officiels de spécialité pour répondre en français avec le Collège, l'édition, l'item et la page.",
+        "developerName": "med-tutor",
+        "category": "Education",
+        "capabilities": [
+          "Read"
+        ],
+        "defaultPrompt": [
+          "Quels examens demander devant une HTA découverte chez un adulte ?",
+          "Explique-moi la prise en charge d'une hyperkaliémie selon les Collèges.",
+          "Compare les recommandations de deux Collèges sur ce point."
+        ]
+      }
+    }
+  }
+}

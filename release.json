@@ -1,0 +1,18 @@
+{
+  "version": "0.1.1",
+  "tag": "v0.1.1",
+  "repository": "https://github.com/HaqpYc/med-tutor-codex",
+  "desktop_acceptance": "untested",
+  "files": {
+    ".agents/plugins/marketplace.json": "7d64b9bbd3d116e46d77a40ac35a1229eafa619eb89292d794e270f7389ad8bc",
+    "README.md": "19025d0d60b4389b85a6b761515881a04e82e3848a051313967a23a1c3971389",
+    "clean-test.ps1": "0d4f9771b9c3cccdd0c21961f33c86ce10efdf5d14c21d983287222bc7b0e1d9",
+    "install.ps1": "48783e579c90fe3ed3caf3e3b7793e8d0c5f0a5bb6459a3b6b75a19f49b0d75e",
+    "plugins/med-tutor/.codex-plugin/plugin.json": "42f4041f5d8644d825e8fac43f97ec1b5e363e9e7bbf303a254bf10d92c7f86c",
+    "plugins/med-tutor/.mcp.json": "6e5467c8e196e86bb6c00ff74b82b9e5faaae3e639b5dedb8db50fd5642164e3",
+    "plugins/med-tutor/mcp.json": "aafea21ba92e90ab0b35d0e7070b561a57bcfb6808ac8a1119266c652c6c0f73",
+    "plugins/med-tutor/plugin.json": "bbc97f8605b79e23a59334fd770f8e7260ecfe2d20077d8a14401f083fc20116",
+    "plugins/med-tutor/skills/med-tutor/SKILL.md": "e0abdae9afae5c6f575c6e9c9f84c840348ffe45e79f9a998d548b3d0c1d7ae5",
+    "plugins/med-tutor/skills/med-tutor/agents/openai.yaml": "eb0693f4cd56bb18cd5ef4fa0c2539e7510104a45beaf063482ff708901ee787"
+  }
+}

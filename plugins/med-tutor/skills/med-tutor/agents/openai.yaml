@@ -1,0 +1,11 @@
+interface:
+  display_name: "med-tutor"
+  short_description: "Tuteur EDN : réponses tirées des Collèges, avec Collège, item et page"
+
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "med-tutor"
+      description: "Recherche dans les Collèges (search_colleges, get_source)"
+      transport: "streamable_http"
+      url: "https://nffxucftczgvkuyzibvy.supabase.co/functions/v1/med-tutor"

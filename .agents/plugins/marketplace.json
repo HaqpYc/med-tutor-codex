@@ -1,0 +1,20 @@
+{
+  "name": "med-tutor-codex",
+  "interface": {
+    "displayName": "med-tutor · pilote Codex"
+  },
+  "plugins": [
+    {
+      "name": "med-tutor",
+      "source": {
+        "source": "local",
+        "path": "./plugins/med-tutor"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Education"
+    }
+  ]
+}
