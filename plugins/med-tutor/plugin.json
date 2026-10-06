@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "med-tutor",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Tuteur EDN fondé sur les Collèges officiels avec citations vérifiables.",
   "author": {
     "name": "med-tutor"

@@ -1,0 +1,2 @@
+# Preserve packaged bytes even when Git for Windows enables core.autocrlf.
+* -text

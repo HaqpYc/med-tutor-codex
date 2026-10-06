@@ -2,7 +2,7 @@
 [CmdletBinding()]
 param(
     [ValidateSet('Install', 'Check', 'Remove')][string]$Action = 'Install',
-    [ValidatePattern('^v[0-9]+\.[0-9]+\.[0-9]+$')][string]$Release = 'v0.1.1',
+    [ValidatePattern('^v[0-9]+\.[0-9]+\.[0-9]+$')][string]$Release = 'v0.1.2',
     [string]$CodexPath
 )
 Set-StrictMode -Version Latest

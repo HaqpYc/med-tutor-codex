@@ -1,8 +1,8 @@
 # med-tutor dans Codex pour Windows
 
-Pilote pour les étudiants invités, version **0.1.1**. Le plugin apprend à Codex à chercher dans les Collèges officiels et à citer le Collège, l'édition, l'item et la page.
+Pilote pour les étudiants invités, version **0.1.2**. Le plugin apprend à Codex à chercher dans les Collèges officiels et à citer le Collège, l'édition, l'item et la page.
 
-**État :** la validation complète sur un profil Windows neuf est en cours. L'installation, la connexion, les outils et la persistance sont des étapes distinctes. N'invitez pas d'autres étudiants avant validation du test décrit ci-dessous.
+**État :** le pilote utilise un test réduit sur l'ordinateur de l'auteur. L'installation Git est testée dans un profil CLI temporaire; OAuth desktop, la persistance et un compte étudiant distinct restent à vérifier. Les outils d'une conversation déjà connectée ne prouvent pas une nouvelle connexion. Les invitations restent en attente de ces vérifications.
 
 ## Ce qu'il vous faut
 
@@ -14,7 +14,7 @@ Le dépôt public contient les instructions du plugin et l'adresse du service. L
 
 ## 1. Installer le plugin
 
-Téléchargez [install.ps1 de la version v0.1.1](https://raw.githubusercontent.com/HaqpYc/med-tutor-codex/v0.1.1/install.ps1), enregistrez-le dans votre dossier Téléchargements et ouvrez PowerShell dans ce dossier. Lisez le script, puis exécutez :
+Téléchargez [install.ps1 de la version v0.1.2](https://raw.githubusercontent.com/HaqpYc/med-tutor-codex/v0.1.2/install.ps1), enregistrez-le dans votre dossier Téléchargements et ouvrez PowerShell dans ce dossier. Lisez le script, puis exécutez :
 
 ```powershell
 powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\install.ps1
@@ -25,7 +25,7 @@ L'option s'applique seulement à ce processus PowerShell. Si une politique admin
 Vous pouvez également exécuter les deux commandes dans un terminal où `codex` est disponible :
 
 ```powershell
-codex plugin marketplace add https://github.com/HaqpYc/med-tutor-codex.git --ref v0.1.1
+codex plugin marketplace add https://github.com/HaqpYc/med-tutor-codex.git --ref v0.1.2
 codex plugin add med-tutor@med-tutor-codex
 ```
 
@@ -65,7 +65,7 @@ Chaque phrase factuelle doit citer un identifiant de passage entre crochets. Une
 
 ## Mettre à jour ou retirer
 
-La version du pilote est épinglée à `v0.1.1`. Utilisez uniquement une nouvelle version validée qui vous est annoncée, puis exécutez le script avec `-Release vX.Y.Z`. Relancez Codex et vérifiez à nouveau une réponse sourcée. Rafraîchir le marketplace seul ne change pas la version épinglée.
+La version du pilote est épinglée à `v0.1.2`. Utilisez uniquement une nouvelle version validée qui vous est annoncée, puis exécutez le script avec `-Release vX.Y.Z`. Relancez Codex et vérifiez à nouveau une réponse sourcée. Rafraîchir le marketplace seul ne change pas la version épinglée. La version 0.1.2 conserve les octets des fichiers malgré la conversion automatique de fins de ligne de Git pour Windows; le tag 0.1.1 reste inchangé.
 
 Pour retirer le plugin :
 
@@ -75,11 +75,17 @@ powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\install.ps1 -Action Re
 
 Une connexion MCP/OAuth distincte peut subsister: déconnectez-la aussi dans Codex. Pour retirer l'accès serveur, la personne qui vous invite enlève votre adresse de la liste d'accès.
 
-## Test sur un ordinateur neuf
+## Test réduit du pilote
+
+Sans créer un nouveau compte Windows, le test réduit installe le plugin depuis Git dans un profil Codex CLI temporaire sans reprendre de configuration ou de jeton MCP. Il vérifie la réinstallation, le retrait, les octets de la compétence et la conservation d'une autre source de plugins et d'un autre réglage. Les deux outils peuvent ensuite être vérifiés séparément dans la conversation desktop déjà connectée.
+
+Ce test n'établit pas une connexion OAuth desktop neuve, le fonctionnement avec un autre compte, le redémarrage ou le renouvellement d'un jeton. Le rapport local garde ces étapes « non testées ». Il ne modifie pas la liste d'accès serveur.
+
+## Test complémentaire sur un ordinateur neuf
 
 Créez un **nouveau profil Windows** et utilisez un navigateur vierge ainsi qu'un compte OpenAI étudiant distinct. Ne copiez ni configuration Codex, ni cache, ni session navigateur, ni jeton depuis l'installation habituelle. Commencez dans un dossier d'étude vide.
 
-1. Avant installation, lancez [clean-test.ps1](https://raw.githubusercontent.com/HaqpYc/med-tutor-codex/v0.1.1/clean-test.ps1). Son rapport local ne contient aucun identifiant. Confirmez séparément le navigateur vierge et le compte OpenAI distinct.
+1. Avant installation, lancez [clean-test.ps1](https://raw.githubusercontent.com/HaqpYc/med-tutor-codex/v0.1.2/clean-test.ps1). Son rapport local ne contient aucun identifiant. Confirmez séparément le navigateur vierge et le compte OpenAI distinct.
 2. Suivez seulement ce guide. Notez les versions de l'application, du CLI et du plugin, ainsi que le commit du tag.
 3. Avec un compte med-tutor de test d'abord non autorisé, vérifiez que les recherches sont refusées. L'administrateur ajoute ensuite cette adresse en conservant la liste complète, puis vous relancez la connexion et une recherche.
 4. Vérifiez les deux outils, les citations, une question ordinaire sans sélectionner la compétence, et une demande « rang A uniquement ».
